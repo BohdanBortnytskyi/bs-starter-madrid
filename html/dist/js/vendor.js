@@ -1,4 +1,4 @@
-(this["webpackChunkattorney"] = this["webpackChunkattorney"] || []).push([["vendor"],{
+(this["webpackChunkbs_starter"] = this["webpackChunkbs_starter"] || []).push([["vendor"],{
 
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js":
 /*!****************************************************************!*\

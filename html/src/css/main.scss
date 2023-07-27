@@ -79,9 +79,9 @@ $container-max-widths: (
 // @import "node_modules/bootstrap/scss/button-group";
 // @import "node_modules/bootstrap/scss/input-group"; // Requires forms
 // @import "node_modules/bootstrap/scss/custom-forms";
-// @import "node_modules/bootstrap/scss/nav";
-// @import "node_modules/bootstrap/scss/navbar"; // Requires nav
-// @import "node_modules/bootstrap/scss/card";
+@import "node_modules/bootstrap/scss/nav";
+@import "node_modules/bootstrap/scss/navbar"; // Requires nav
+@import "node_modules/bootstrap/scss/card";
 // @import "node_modules/bootstrap/scss/breadcrumb";
 // @import "node_modules/bootstrap/scss/pagination";
 // @import "node_modules/bootstrap/scss/badge";
