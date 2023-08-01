@@ -4124,7 +4124,7 @@ fieldset:disabled .btn {
 }
 
 .fs-0 {
-  font-size: calc(1.775rem + 6.3vw) !important;
+  font-size: calc(1.75rem + 6vw) !important;
 }
 
 .fs-1 {
@@ -4999,7 +4999,7 @@ fieldset:disabled .btn {
 }
 
 body {
-  font-family: "Inter" !important;
+  font-family: "Inter";
   font-size: 16px;
   font-weight: 400;
 }
@@ -5010,8 +5010,25 @@ a {
   display: inline-block;
 }
 
+@font-face {
+  font-family: "Impact";
+  src: url("/fonts/Impact/Impact.woff2") format("woff2"), url("Impact.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("/fonts/BebasNeue/BebasNeue-Regular.woff") format("woff2"), url("BebasNeue-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 .page-header {
   height: 70px;
+  background-color: #fff;
 }
 
 .page-header .nav-link {
@@ -5027,6 +5044,38 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
+}
+
+.page-hero__content-video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.page-hero__content__row-one {
+  height: 800px;
+}
+
+.page-hero__content__row-two {
+  height: 700px;
+}
+
+.page-hero__content__row-two .link {
+  height: 245px;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.page-hero__content__row-two .link div {
+  padding: 20px;
+}
+
+.page-hero__content__row-two .link div img {
+  width: 20px;
+  height: 20px;
 }
 
 @media (min-width: 576px) {
@@ -9328,7 +9377,7 @@ a {
   }
 
   .fs-0 {
-    font-size: 6.5rem !important;
+    font-size: 6.25rem !important;
   }
 
   .fs-1 {

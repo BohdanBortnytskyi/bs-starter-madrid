@@ -33,7 +33,7 @@ $link-decoration: none;
 // adapting to different screen sizes, for use in media queries.
 
 $font-sizes: (
-  0: 6.5rem,
+  0: 100px,
   1: $h1-font-size,
   2: $h2-font-size,
   3: $h3-font-size,
@@ -142,6 +142,7 @@ $container-max-widths: (
 // 8. Add additional custom code here
 
 @import 'global/global';
+@import 'global/fonts';
 @import 'modules/header';
 @import 'modules/hero';
 @import 'modules/footer';

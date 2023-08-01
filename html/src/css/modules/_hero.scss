@@ -1,9 +1,55 @@
-.page-hero{
-    background-image: url('/img/bg.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: top center;
-    &__inner{
-        
+.page-hero {
+    background-image: url("/img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+
+    &__content {
+        &-video {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+        &__row-one {
+            height: 800px;
+        }
+        &__row-two {
+            height: 700px;
+            .link {
+                div{
+                    padding: 20px;
+                    img{
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                height: 245px;
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                text-transform: uppercase;
+            }
+        }
     }
 }
+// &__content {
+//     font-family: 'Inter';
+//     font-style: normal;
+//     font-weight: 400;
+//     line-height: normal;
+//     text-transform: uppercase;
+//     &-text{
+//         font-size: 40px;
+//         @include media-breakpoint-up(lg) {
+//               font-size: 100px;
+//       }
+//     }
+
+//     &-btn{
+//         display:inline-block;
+//         font-size: 20px;
+//         padding: 18px 155px;
+//         border-radius: 10px;
+//     }
+// }
