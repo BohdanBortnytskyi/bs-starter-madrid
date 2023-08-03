@@ -5118,6 +5118,34 @@ a {
   background-position: top center;
 }
 
+.page-hero__title {
+  font-size: 40px;
+}
+
+.page-hero__title-btn {
+  font-size: 16px;
+  padding: 7px 40px;
+  transition: all 0.3s;
+}
+
+.page-hero__title-btn:hover {
+  animation: pulsate 2s infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+  }
+
+  50% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 0, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 136, 0, 0);
+  }
+}
+
 .page-hero__content-video {
   object-fit: cover;
   height: 100%;
@@ -5133,7 +5161,7 @@ a {
 }
 
 .page-hero__content__row-two .link {
-  height: 245px;
+  height: 111px;
   font-size: 36px;
   font-style: normal;
   font-weight: 600;
@@ -5141,13 +5169,25 @@ a {
   text-transform: uppercase;
 }
 
-.page-hero__content__row-two .link div {
-  padding: 20px;
+.page-hero__content__row-two .link__box {
+  padding: 10px;
+  transition: all 0.3s;
 }
 
-.page-hero__content__row-two .link div img {
-  width: 20px;
-  height: 20px;
+.page-hero__content__row-two .link__box:hover {
+  background-color: #fff !important;
+}
+
+.page-hero__content__row-two .link__info-name {
+  font-size: 14px;
+}
+
+.page-hero__content__row-two .link__decor-number {
+  font-size: 11px;
+}
+
+.page-hero__content__row-two .link__decor-icon {
+  transform: rotate(180deg);
 }
 
 @media (min-width: 576px) {
@@ -6252,6 +6292,10 @@ a {
   .text-sm-center {
     text-align: center !important;
   }
+
+  .page-hero__content__row-two .link {
+    height: 200px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -7296,6 +7340,10 @@ a {
 
   .text-md-center {
     text-align: center !important;
+  }
+
+  .page-hero__content__row-two .link__decor-number {
+    font-size: 16px;
   }
 }
 
@@ -8347,6 +8395,27 @@ a {
 
   .text-lg-center {
     text-align: center !important;
+  }
+
+  .page-hero__title {
+    font-size: 70px;
+  }
+
+  .page-hero__title-btn {
+    font-size: 20px;
+    padding: 23px 163px;
+  }
+
+  .page-hero__content__row-two .link__box {
+    padding: 20px;
+  }
+
+  .page-hero__content__row-two .link__decor-number {
+    font-size: 24px;
+  }
+
+  .page-hero__content__row-two .link {
+    height: 245px;
   }
 }
 
@@ -9475,6 +9544,10 @@ a {
   .fs-8 {
     font-size: 2.25rem !important;
   }
+
+  .page-hero__content__row-two .link__info-name {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 1676px) {
@@ -10522,6 +10595,14 @@ a {
 
   .text-xxl-center {
     text-align: center !important;
+  }
+
+  .page-hero__title {
+    font-size: 100px;
+  }
+
+  .page-hero__content__row-two .link__info-name {
+    font-size: 36px;
   }
 }
 
