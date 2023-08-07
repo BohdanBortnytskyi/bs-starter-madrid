@@ -1,0 +1,77 @@
+.page-marketing-madrid{
+    
+    &__header{
+        font-family: 'Impact';
+        font-size: 24px;
+        line-height: normal;
+        @include media-breakpoint-up(lg) {
+            font-size: 50px;
+        }
+        @include media-breakpoint-up(xl) {
+            font-size: 86px;
+        }
+    }
+    &__logo{
+       
+        position: absolute;
+        opacity: 0.1;
+        object-fit: cover;
+        top:50px;
+        @include media-breakpoint-up(sm) {
+           position: static;
+           opacity: 1;
+           width: 10vw;
+        }
+        
+    }
+    &__dropdown{
+     &-text{
+        font-size: 16px;
+        line-height: 24px;
+         @include media-breakpoint-up(lg) {
+           font-size: 24px;
+        }
+    
+    }
+    &-btn{
+        z-index: 1;
+     }
+    }
+    .collapse {
+        &:not(.show) {
+            
+            display: block;
+            height: 100px;
+            padding-bottom: 100px;
+            overflow: hidden;
+            position: relative;
+        }
+        &:not(.show)::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px; /* Adjust the height of the fading effect as needed */
+            background: linear-gradient(180deg, rgba(26, 26, 26, 0.00) 0%, #1A1A1A 100%); /* Adjust the gradient colors and transparency as needed */
+          }
+        }
+      
+    .collapsing {
+        height: 100px;
+        overflow: hidden;
+        
+    }
+    
+}
+
+.arrow-icon {
+    display: inline-block;
+    vertical-align: middle;
+    transform-origin: center;
+  }
+  
+  .rotate-up {
+    transform: rotate(180deg);
+  }
+  

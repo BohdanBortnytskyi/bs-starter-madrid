@@ -6,12 +6,13 @@
 
 // Colors
 //
-
+$transition-collapse:         height .1s ease;
 $primary    : #1A1A1A;
 $secondary  : #0A0A0A;
 $orange     : #F08377;
 $yellow     : #FECE63;
 $violet     : #9576FD;
+$grey       : #818181;
 
 
 // Quickly modify global styling by enabling or disabling optional features.
@@ -59,6 +60,7 @@ $grid-breakpoints: (
 
 // Theme map
 $custom-colors: (
+  "grey"    : $grey,
   "orange"  : $orange,
   "violet"  : $violet,
   "yellow"  : $yellow,
@@ -78,9 +80,9 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-  xs: 320px,
+  xs: 80%,
   sm: 540px,
-  md: 720px,
+  md: 738px,
   lg: 960px,
   xl: 1160px,
   xxl: 1646px,
@@ -142,7 +144,9 @@ $container-max-widths: (
 // 8. Add additional custom code here
 
 @import 'global/global';
+@import 'global/animations';
 @import 'global/fonts';
 @import 'modules/header';
 @import 'modules/hero';
+@import 'modules/markiting';
 @import 'modules/footer';

@@ -1,12 +1,51 @@
 .page-header {
     height: 70px;
     background-color: #fff;
-
-.nav-link{
-   max-width: 100px;
-   svg{
-    margin-left: 10px;
-   }
+.navbar-nav {
+    gap:20px;
 }
+.nav-item{
+    height: 67px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Убираем дефолтное подчеркивание текста */
+    &::before{
+        content: "";
+        position: absolute;
+        bottom:0; /* Выравнивание подчеркивания относительно текста */
+        left: 0;
+        width: 0;
+        height: 2px; /* Толщина подчеркивания */
+        background-color: #000; /* Цвет подчеркивания */
+        transition: width 0.3s; /* Добавляем анимацию для изменения ширины подчеркивания */
+       
+    }
+    &:hover::before {
+        width: 100%; /* Изменяем ширину подчеркивания при наведении (от 0 до 100%) */
+    } 
+}
+.nav-link{
+   padding: 0 !important;
+    @include media-breakpoint-up(lg) {
+        max-width: 100px;
+    }
+}
+    .contacts{
+        transition: all .3s;
+        .arrow{
+            stroke: #000;
+        }
+        &:hover {
+            animation: pulsate__violet 2s infinite;
+            .arrow{
+                stroke: #fff !important;
+                fill: #fff !important;
+                animation: shake 0.5s infinite;
+            }
+            color: #fff;
+        }
+    }
 }
 

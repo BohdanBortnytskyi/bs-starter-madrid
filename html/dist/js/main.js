@@ -27,6 +27,19 @@ __webpack_require__.r(__webpack_exports__);
 // import "bootstrap/js/dist/modal.js";
 // import "bootstrap/js/dist/popover";
 
+var collapseElement = document.getElementById('collapseExample');
+var btnElement = document.querySelector('[data-bs-toggle="collapse"]');
+var arrowIcon = document.querySelector('.arrow-icon');
+var btnText = document.querySelector('.btn-text');
+collapseElement.addEventListener('show.bs.collapse', function () {
+  arrowIcon.classList.add('rotate-up');
+  btnText.textContent = 'Mostrar menos';
+});
+collapseElement.addEventListener('hide.bs.collapse', function () {
+  arrowIcon.classList.remove('rotate-up');
+  btnText.textContent = 'Leer más';
+});
+
 /***/ })
 
 /******/ 	});

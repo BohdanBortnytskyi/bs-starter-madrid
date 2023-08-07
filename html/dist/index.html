@@ -34,10 +34,13 @@
   <header class="page-header sticky-top border-bottom d-lg-flex align-items-center">
     <div class=" px-0 h-100 container">
       <div class="row g-0 h-100">
-        <a class="navbar-brand d-none d-lg-block col m-0 align-self-center" href="#">
-          <img src="img/logo.svg" alt="logo">
-        </a>
-        <nav class="navbar navbar-expand-lg h-100 py-0 align-items-center col">
+        <div class="d-none d-lg-block col align-self-center">
+          <a class="navbar-brand m-0 " href="#">
+            <img src="img/logo.svg" alt="logo">
+          </a>
+        </div>
+        
+        <nav class="navbar navbar-expand-lg h-100 py-0 align-items-center justify-content-between col">
 
           <!-- Кнопка для открытия offcanvas -->
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
@@ -57,34 +60,34 @@
               <a class="navbar-brand d-lg-none m-0" href="#">
                 <img src="img/logo.svg" alt="logo">
               </a>
-              <ul class="navbar-nav d-flex flex-grow-1 align-items-center justify-content-between me-3">
+              <ul class="navbar-nav d-flex flex-grow-1 align-items-start align-items-lg-center justify-content-around  text-wrap">
                 <li class="nav-item">
                   <a class="nav-link" href="#">Sobre nosotros</a>
                 </li>
                 <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Premios 2023</a></li>
-                <li class="nav-item d-flex align-items-center">
+                <li class="nav-item d-flex align-items-center ms-2">
                   <svg class="flex-shrink-0" width="15" height="16" viewBox="0 0 15 16" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M7.5 9.5C11.64 9.5 15 11.07 15 13V15.5H0V13C0 11.07 3.36 9.5 7.5 9.5ZM14 13C14 11.62 11.09 10.5 7.5 10.5C3.91 10.5 1 11.62 1 13V14.5H14V13ZM7.5 0.5C8.42826 0.5 9.3185 0.868749 9.97487 1.52513C10.6313 2.1815 11 3.07174 11 4C11 4.92826 10.6313 5.8185 9.97487 6.47487C9.3185 7.13125 8.42826 7.5 7.5 7.5C6.57174 7.5 5.6815 7.13125 5.02513 6.47487C4.36875 5.8185 4 4.92826 4 4C4 3.07174 4.36875 2.1815 5.02513 1.52513C5.6815 0.868749 6.57174 0.5 7.5 0.5ZM7.5 1.5C6.83696 1.5 6.20107 1.76339 5.73223 2.23223C5.26339 2.70107 5 3.33696 5 4C5 4.66304 5.26339 5.29893 5.73223 5.76777C6.20107 6.23661 6.83696 6.5 7.5 6.5C8.16304 6.5 8.79893 6.23661 9.26777 5.76777C9.73661 5.29893 10 4.66304 10 4C10 3.33696 9.73661 2.70107 9.26777 2.23223C8.79893 1.76339 8.16304 1.5 7.5 1.5Z"
                       fill="black" />
                   </svg>
-                  <a href="#" class="nav-link ms-1">Premios 2023</a>
+                  <a href="#" class="nav-link ms-2">Premios 2023</a>
                 </li>
                 <li class="nav-item d-flex align-items-center">
                   <img class="flex-shrink-0" src="img/lang.svg" alt="">
-                  <a href="#" class="nav-link">ES</a>
+                  <a href="#" class="nav-link ms-2">ES</a>
                 </li>
 
               </ul>
             </div>
           </div>
 
-          <div class="contacts bg-violet d-flex align-items-center py-0 px-3 h-100">
+          <div class="contacts bg-violet d-flex align-items-center py-0 px-3 h-100 ms-3">
             <p class="me-3 my-0">Contactanos</p>
-            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M25 25L1 0.999998M1 0.999998L1 24.04M1 0.999998L24.04 1" stroke="#0A0A0A" stroke-width="1.5"
+            <svg class="arrow" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M25 25L1 0.999998M1 0.999998L1 24.04M1 0.999998L24.04 1" stroke-width="1.5"
                 stroke-linecap="round" stroke-linejoin="round" />
             </svg>
 
@@ -161,13 +164,67 @@
     </div>
   </div>
 </section>
+<section class="page-marketing-madrid bg-primary pt-5">
+    <div class="container position-relative ">
+        <div class="row mb-4 d-sm-flex align-items-center">
+            <header class="page-marketing-madrid__header text-white col-sm-9">Llamamiento a los compañeros de marketing de Madrid </header>
+            <div class="d-flex justify-content-center col-sm-3">
+              <img src="img/logo__madrid.svg" alt="" class="page-marketing-madrid__logo z-0">
+            </div>
+        </div>
+       <div class="page-marketing-madrid__dropdown-text d-flex flex-column ">
+        <div class="collapse" id="collapseExample">
+          <div class="text-white">
+           <p class="mb-3">Nos dirigimos a ustedes, profesionales del marketing, los que se esfuerzan por lograr resultados extraordinarios en su trabajo. Creemos que juntos podemos crear algo grande, superar los límites y alcanzar nuevas cimas. En este discurso queremos destacar la importancia de unirnos y trabajar colectivamente para alcanzar el máximo potencial.</p>
+           <p class="mb-3">Animamos a todos las personas que se dedican al marketing, independientemente de su experiencia o área de especialización, a trabajar codo con codo y avanzar juntos. Creemos que la colaboración y la cooperación son fundamentales para lograr resultados superiores. Juntos podemos superar retos, compartir conocimientos y experiencias, e inspirarnos mutuamente con nuevas ideas y enfoques. </p>
+           <p class="mb-3">Instamos a que sean abiertos y al intercambio de experiencias. Compartamos nuestros éxitos y fracasos, aprendamos de la experiencia de los demás y contribuyamos al desarrollo de la comunidad del marketing. Juntos podemos abrir nuevos horizontes, utilizar tecnologías y estrategias avanzadas y encontrar soluciones innovadoras para nuestros clientes y marcas.</p>
+           <p class="mb-3">Hacemos un llamamiento a la cooperación y el apoyo mutuo. Creemos juntos una sólida comunidad de profesionales del marketing en la que cada miembro pueda encontrar apoyo, asesoramiento e inspiración. Nuestras reuniones se celebrarán en diversos actos, conferencias y plataformas en línea para debatir problemas, compartir conocimientos y crear proyectos conjuntos. Juntos podemos superar cualquier obstáculo y lograr resultados asombrosos.</p>
+          </div>
+        </div>
+        <div class="page-marketing-madrid__dropdown-btn align-self-center my-5">
+          <a class="btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <span class="btn-text text-grey">Leer más</span>
+            <span class="arrow-icon">
+              <svg class="icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 28L26 18L24.59 16.59L17 24.17L17 4H15L15 24.17L7.41 16.59L6 18L16 28Z" fill="#818181"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+       </div>
+    </div>
+</section>
 </main>
 <!-- main end -->
-<footer class="page-footer border-top py-3">
+<footer class="page-footer border-top text-white bg-primary p-3">
   <div class="container">
     <div class="row">
-      <div class="col-12">
-        <p>Footer</p>
+      <div class="d-flex flex-column flex-xl-row">
+        <div class="col page-footer__top d-flex flex-column align-items-start mb-4">
+          <h2 class="page-footer__top-title text-uppercase fw-regular fw-xl-semibold text-lg-nowrap">Club de marketing de Madrid</h2>
+          <a href="#" class="page-footer__top-link flex-shrink-0 bg-white text-primary rounded">CONTACTANOS</a>
+          <img src="img/logo_for_footer.svg" alt="Logo" class="page-footer__top-logo">
+        </div>
+        <div class="col d-flex">
+          <ul class="page-footer__nav nav flex-column justify-content-between">
+            <li class="page-footer__nav-item nav-item px-0">
+              <a class="page-footer__nav-link nav-link text-white animated-underline" href="#">Premios anuales de contenido audiovisual</a>
+            </li>
+            <li class="page-footer__nav-item nav-item ">
+              <a class="page-footer__nav-link nav-link text-white" href="#">Sobre nosotros</a>
+            </li>
+            <li class="page-footer__nav-item nav-item">
+              <a class="page-footer__nav-link nav-link text-white" href="#">Nuestros eventos</a>
+            </li>
+            <li class="page-footer__nav-item nav-item">
+              <a class="page-footer__nav-link nav-link text-white" href="#">Calendario de eventos</a>
+            </li>
+            <li class="page-footer__nav-item nav-item">
+              <a class="page-footer__nav-link nav-link text-white" href="#">F.A.Q</a>
+            </li>
+          </ul>
+        </div>
+      </div>
       </div>
     </div>
   </div>

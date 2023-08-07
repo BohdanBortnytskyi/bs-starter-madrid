@@ -21,3 +21,24 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 // import "bootstrap/js/dist/util/index";
 // import "bootstrap/js/dist/modal.js";
 // import "bootstrap/js/dist/popover";
+
+
+const collapseElement = document.getElementById('collapseExample');
+const btnElement = document.querySelector('[data-bs-toggle="collapse"]');
+const arrowIcon = document.querySelector('.arrow-icon');
+const btnText = document.querySelector('.btn-text');
+
+collapseElement.addEventListener('show.bs.collapse', function () {
+  arrowIcon.classList.add('rotate-up');
+  btnText.textContent = 'Mostrar menos';
+});
+
+collapseElement.addEventListener('hide.bs.collapse', function () {
+  arrowIcon.classList.remove('rotate-up');
+  btnText.textContent = 'Leer más';
+});
+
+
+
+
+

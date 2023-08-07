@@ -1,3 +1,76 @@
 .page-footer {
 
+    &__top {
+        gap: 35px;
+       
+        &-title {
+            font-size: 24px;
+            @include media-breakpoint-up(lg) {
+                font-weight:normal !important;
+               font-size: 36px;
+            }
+        }
+
+        &-link {
+            padding: 7px 40px;
+            font-size: 16px;
+            &:hover {
+                animation: pulsate__white 1s infinite;
+            }
+            
+            @include media-breakpoint-up(lg) {
+                font-size: 20px;
+                padding: 30px 132px;
+            }
+
+        }
+
+        &-logo {
+            object-fit: cover;
+            width: 93px;
+            @include media-breakpoint-up(lg) {
+              width: 155px;
+             }
+        }
+        @include media-breakpoint-up(lg) {
+           gap: 55px;
+        }
+
+       
+    }
+    &__nav {
+        &-link {
+            padding: 10px 0;
+            color:white;
+            font-size: 16px;
+            font-weight: 100;
+            line-height: 16px;
+            position: relative;
+            display: inline-block;
+            text-decoration: none; /* Убираем дефолтное подчеркивание текста */
+            transition: color 0.3s;
+            @include media-breakpoint-up(lg) {
+               font-size: 24px;
+               line-height: 38px;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                bottom: -2px; /* Выравнивание подчеркивания относительно текста */
+                left: 0;
+                width: 0;
+                height: 2px; /* Толщина подчеркивания */
+                background-color: #fff; /* Цвет подчеркивания */
+                transition: width 0.3s; /* Добавляем анимацию для изменения ширины подчеркивания */
+               
+            }
+            &:hover::before {
+                width: 100%; /* Изменяем ширину подчеркивания при наведении (от 0 до 100%) */
+            }
+            
+
+        }
+          
+    }     
+      
 }

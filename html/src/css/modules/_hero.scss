@@ -22,26 +22,12 @@
                 font-size: 20px;
                 padding: 23px 163px;
             }
-
             transition: all .3s;
-
             &:hover {
-                animation: pulsate 2s infinite;
+                animation: pulsate__white 2s infinite;
+            
             }
-
-            @keyframes pulsate {
-                0% {
-                    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
-                }
-
-                50% {
-                    box-shadow: 0 0 0 20px rgba(255, 255, 0, 0);
-                }
-
-                100% {
-                    box-shadow: 0 0 0 0 rgba(255, 136, 0, 0);
-                }
-            }
+            
 
            
         }
@@ -56,13 +42,11 @@
         }
 
         &__row-one {
-            height: 800px;
+           
 
         }
 
         &__row-two {
-            height: 700px;
-
             .link {
                 
                 &__box{

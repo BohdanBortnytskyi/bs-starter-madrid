@@ -33,6 +33,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
+  --bs-grey: #818181;
   --bs-orange: #F08377;
   --bs-violet: #9576FD;
   --bs-yellow: #FECE63;
@@ -44,6 +45,7 @@
   --bs-danger-rgb: 220, 53, 69;
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 33, 37, 41;
+  --bs-grey-rgb: 129, 129, 129;
   --bs-orange-rgb: 240, 131, 119;
   --bs-violet-rgb: 149, 118, 253;
   --bs-yellow-rgb: 254, 206, 99;
@@ -714,7 +716,7 @@ progress {
 }
 
 .container {
-  max-width: 320px;
+  max-width: 80%;
 }
 
 .container-xxl,
@@ -1008,6 +1010,11 @@ progress {
   background-color: RGBA(var(--bs-dark-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
+.text-bg-grey {
+  color: #000 !important;
+  background-color: RGBA(var(--bs-grey-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
 .text-bg-orange {
   color: #000 !important;
   background-color: RGBA(var(--bs-orange-rgb), var(--bs-bg-opacity, 1)) !important;
@@ -1109,6 +1116,17 @@ progress {
 .link-dark:focus {
   color: RGBA(26, 30, 33, var(--bs-link-opacity, 1)) !important;
   text-decoration-color: RGBA(26, 30, 33, var(--bs-link-underline-opacity, 1)) !important;
+}
+
+.link-grey {
+  color: RGBA(var(--bs-grey-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-grey-rgb), var(--bs-link-underline-opacity, 1)) !important;
+}
+
+.link-grey:hover,
+.link-grey:focus {
+  color: RGBA(154, 154, 154, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(154, 154, 154, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-orange {
@@ -1524,6 +1542,23 @@ fieldset:disabled .btn {
   --bs-btn-disabled-border-color: #212529;
 }
 
+.btn-grey {
+  --bs-btn-color: #000;
+  --bs-btn-bg: #818181;
+  --bs-btn-border-color: #818181;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #949494;
+  --bs-btn-hover-border-color: #8e8e8e;
+  --bs-btn-focus-shadow-rgb: 110, 110, 110;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #9a9a9a;
+  --bs-btn-active-border-color: #8e8e8e;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #818181;
+  --bs-btn-disabled-border-color: #818181;
+}
+
 .btn-orange {
   --bs-btn-color: #000;
   --bs-btn-bg: #F08377;
@@ -1711,6 +1746,23 @@ fieldset:disabled .btn {
   --bs-gradient: none;
 }
 
+.btn-outline-grey {
+  --bs-btn-color: #818181;
+  --bs-btn-border-color: #818181;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #818181;
+  --bs-btn-hover-border-color: #818181;
+  --bs-btn-focus-shadow-rgb: 129, 129, 129;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #818181;
+  --bs-btn-active-border-color: #818181;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #818181;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #818181;
+  --bs-gradient: none;
+}
+
 .btn-outline-orange {
   --bs-btn-color: #F08377;
   --bs-btn-border-color: #F08377;
@@ -1815,7 +1867,7 @@ fieldset:disabled .btn {
 .collapsing {
   height: 0;
   overflow: hidden;
-  transition: height 0.35s ease;
+  transition: height 0.1s ease;
 }
 
 .collapsing.collapse-horizontal {
@@ -3152,6 +3204,10 @@ fieldset:disabled .btn {
   --bs-focus-ring-color: rgba(var(--bs-dark-rgb), var(--bs-focus-ring-opacity));
 }
 
+.focus-ring-grey {
+  --bs-focus-ring-color: rgba(var(--bs-grey-rgb), var(--bs-focus-ring-opacity));
+}
+
 .focus-ring-orange {
   --bs-focus-ring-color: rgba(var(--bs-orange-rgb), var(--bs-focus-ring-opacity));
 }
@@ -3322,6 +3378,11 @@ fieldset:disabled .btn {
 .border-dark {
   --bs-border-opacity: 1;
   border-color: rgba(var(--bs-dark-rgb), var(--bs-border-opacity)) !important;
+}
+
+.border-grey {
+  --bs-border-opacity: 1;
+  border-color: rgba(var(--bs-grey-rgb), var(--bs-border-opacity)) !important;
 }
 
 .border-orange {
@@ -4308,6 +4369,11 @@ fieldset:disabled .btn {
   color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
 }
 
+.text-grey {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-grey-rgb), var(--bs-text-opacity)) !important;
+}
+
 .text-orange {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-orange-rgb), var(--bs-text-opacity)) !important;
@@ -4525,6 +4591,11 @@ fieldset:disabled .btn {
   text-decoration-color: rgba(var(--bs-dark-rgb), var(--bs-link-underline-opacity)) !important;
 }
 
+.link-underline-grey {
+  --bs-link-underline-opacity: 1;
+  text-decoration-color: rgba(var(--bs-grey-rgb), var(--bs-link-underline-opacity)) !important;
+}
+
 .link-underline-orange {
   --bs-link-underline-opacity: 1;
   text-decoration-color: rgba(var(--bs-orange-rgb), var(--bs-link-underline-opacity)) !important;
@@ -4631,6 +4702,11 @@ fieldset:disabled .btn {
 .bg-dark {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-grey {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-grey-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-orange {
@@ -5010,6 +5086,52 @@ a {
   display: inline-block;
 }
 
+@keyframes pulsate__violet {
+  0% {
+    box-shadow: 0 0 0 0 rgba(149, 118, 253, 0.6);
+  }
+
+  50% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 0, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 136, 0, 0);
+  }
+}
+
+@keyframes pulsate__white {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+  }
+
+  50% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 0, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 136, 0, 0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translate(0);
+  }
+
+  25% {
+    transform: rotate(2deg);
+  }
+
+  50% {
+    transform: rotate(-2deg);
+  }
+
+  75% {
+    transform: rotate(2deg);
+  }
+}
+
 @font-face {
   font-family: "Impact";
   src: url("/fonts/Impact/Impact.woff2") format("woff2"), url("Impact.woff") format("woff");
@@ -5103,12 +5225,61 @@ a {
   background-color: #fff;
 }
 
-.page-header .nav-link {
-  max-width: 100px;
+.page-header .navbar-nav {
+  gap: 20px;
 }
 
-.page-header .nav-link svg {
-  margin-left: 10px;
+.page-header .nav-item {
+  height: 67px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  /* Убираем дефолтное подчеркивание текста */
+}
+
+.page-header .nav-item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  /* Выравнивание подчеркивания относительно текста */
+  left: 0;
+  width: 0;
+  height: 2px;
+  /* Толщина подчеркивания */
+  background-color: #000;
+  /* Цвет подчеркивания */
+  transition: width 0.3s;
+  /* Добавляем анимацию для изменения ширины подчеркивания */
+}
+
+.page-header .nav-item:hover::before {
+  width: 100%;
+  /* Изменяем ширину подчеркивания при наведении (от 0 до 100%) */
+}
+
+.page-header .nav-link {
+  padding: 0 !important;
+}
+
+.page-header .contacts {
+  transition: all 0.3s;
+}
+
+.page-header .contacts .arrow {
+  stroke: #000;
+}
+
+.page-header .contacts:hover {
+  animation: pulsate__violet 2s infinite;
+  color: #fff;
+}
+
+.page-header .contacts:hover .arrow {
+  stroke: #fff !important;
+  fill: #fff !important;
+  animation: shake 0.5s infinite;
 }
 
 .page-hero {
@@ -5129,35 +5300,13 @@ a {
 }
 
 .page-hero__title-btn:hover {
-  animation: pulsate 2s infinite;
-}
-
-@keyframes pulsate {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
-  }
-
-  50% {
-    box-shadow: 0 0 0 20px rgba(255, 255, 0, 0);
-  }
-
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 136, 0, 0);
-  }
+  animation: pulsate__white 2s infinite;
 }
 
 .page-hero__content-video {
   object-fit: cover;
   height: 100%;
   width: 100%;
-}
-
-.page-hero__content__row-one {
-  height: 800px;
-}
-
-.page-hero__content__row-two {
-  height: 700px;
 }
 
 .page-hero__content__row-two .link {
@@ -5188,6 +5337,118 @@ a {
 
 .page-hero__content__row-two .link__decor-icon {
   transform: rotate(180deg);
+}
+
+.page-marketing-madrid__header {
+  font-family: "Impact";
+  font-size: 24px;
+  line-height: normal;
+}
+
+.page-marketing-madrid__logo {
+  position: absolute;
+  opacity: 0.1;
+  object-fit: cover;
+  top: 50px;
+}
+
+.page-marketing-madrid__dropdown-text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.page-marketing-madrid__dropdown-btn {
+  z-index: 1;
+}
+
+.page-marketing-madrid .collapse:not(.show) {
+  display: block;
+  height: 100px;
+  padding-bottom: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.page-marketing-madrid .collapse:not(.show)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  /* Adjust the height of the fading effect as needed */
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0) 0%, #1A1A1A 100%);
+  /* Adjust the gradient colors and transparency as needed */
+}
+
+.page-marketing-madrid .collapsing {
+  height: 100px;
+  overflow: hidden;
+}
+
+.arrow-icon {
+  display: inline-block;
+  vertical-align: middle;
+  transform-origin: center;
+}
+
+.rotate-up {
+  transform: rotate(180deg);
+}
+
+.page-footer__top {
+  gap: 35px;
+}
+
+.page-footer__top-title {
+  font-size: 24px;
+}
+
+.page-footer__top-link {
+  padding: 7px 40px;
+  font-size: 16px;
+}
+
+.page-footer__top-link:hover {
+  animation: pulsate__white 1s infinite;
+}
+
+.page-footer__top-logo {
+  object-fit: cover;
+  width: 93px;
+}
+
+.page-footer__nav-link {
+  padding: 10px 0;
+  color: white;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 16px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  /* Убираем дефолтное подчеркивание текста */
+  transition: color 0.3s;
+}
+
+.page-footer__nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  /* Выравнивание подчеркивания относительно текста */
+  left: 0;
+  width: 0;
+  height: 2px;
+  /* Толщина подчеркивания */
+  background-color: #fff;
+  /* Цвет подчеркивания */
+  transition: width 0.3s;
+  /* Добавляем анимацию для изменения ширины подчеркивания */
+}
+
+.page-footer__nav-link:hover::before {
+  width: 100%;
+  /* Изменяем ширину подчеркивания при наведении (от 0 до 100%) */
 }
 
 @media (min-width: 576px) {
@@ -6296,13 +6557,19 @@ a {
   .page-hero__content__row-two .link {
     height: 200px;
   }
+
+  .page-marketing-madrid__logo {
+    position: static;
+    opacity: 1;
+    width: 10vw;
+  }
 }
 
 @media (min-width: 768px) {
   .container-md,
   .container-sm,
   .container {
-    max-width: 720px;
+    max-width: 738px;
   }
 
   .col-md {
@@ -8397,6 +8664,10 @@ a {
     text-align: center !important;
   }
 
+  .page-header .nav-link {
+    max-width: 100px;
+  }
+
   .page-hero__title {
     font-size: 70px;
   }
@@ -8416,6 +8687,37 @@ a {
 
   .page-hero__content__row-two .link {
     height: 245px;
+  }
+
+  .page-marketing-madrid__header {
+    font-size: 50px;
+  }
+
+  .page-marketing-madrid__dropdown-text {
+    font-size: 24px;
+  }
+
+  .page-footer__top-title {
+    font-weight: normal !important;
+    font-size: 36px;
+  }
+
+  .page-footer__top-link {
+    font-size: 20px;
+    padding: 30px 132px;
+  }
+
+  .page-footer__top-logo {
+    width: 155px;
+  }
+
+  .page-footer__top {
+    gap: 55px;
+  }
+
+  .page-footer__nav-link {
+    font-size: 24px;
+    line-height: 38px;
   }
 }
 
@@ -9547,6 +9849,10 @@ a {
 
   .page-hero__content__row-two .link__info-name {
     font-size: 20px;
+  }
+
+  .page-marketing-madrid__header {
+    font-size: 86px;
   }
 }
 
