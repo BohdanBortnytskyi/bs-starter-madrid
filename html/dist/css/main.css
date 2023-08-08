@@ -734,7 +734,7 @@ progress {
   --bs-breakpoint-md: 768px;
   --bs-breakpoint-lg: 992px;
   --bs-breakpoint-xl: 1200px;
-  --bs-breakpoint-xxl: 1676px;
+  --bs-breakpoint-xxl: 1696px;
 }
 
 .row {
@@ -5303,40 +5303,35 @@ a {
   animation: pulsate__white 2s infinite;
 }
 
-.page-hero__content-video {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
-
-.page-hero__content__row-two .link {
-  height: 111px;
-  font-size: 36px;
+.page-hero__link-box {
+  padding: 10px;
+  min-height: 111px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   text-transform: uppercase;
-}
-
-.page-hero__content__row-two .link__box {
-  padding: 10px;
-  transition: all 0.3s;
-}
-
-.page-hero__content__row-two .link__box:hover {
-  background-color: #fff !important;
-}
-
-.page-hero__content__row-two .link__info-name {
   font-size: 14px;
 }
 
-.page-hero__content__row-two .link__decor-number {
+.page-hero__link-icon {
+  width: 1.3em;
+  object-fit: contain;
+}
+
+.page-hero__link-decor {
   font-size: 11px;
 }
 
-.page-hero__content__row-two .link__decor-icon {
+.page-hero__link-arrow {
   transform: rotate(180deg);
+  width: 1em;
+  height: 1em;
+}
+
+.page-hero__content-video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .page-marketing-madrid__header {
@@ -5394,6 +5389,49 @@ a {
 
 .rotate-up {
   transform: rotate(180deg);
+}
+
+.page-en_youtube__header h2,
+.page-en_youtube__header .h2 {
+  font-family: "Impact";
+  font-size: 24px;
+  line-height: normal;
+}
+
+.page-en_youtube__content-box {
+  position: relative;
+  height: 60vw;
+}
+
+.page-en_youtube__content-box .play-icon {
+  width: 50px;
+  height: 50px;
+  opacity: 0.7;
+}
+
+.page-en_youtube__content-box .video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.page-en_youtube__content-box:hover .video-overlay {
+  opacity: 0;
+}
+
+.page-en_youtube__content-box video {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .page-footer__top {
@@ -6554,7 +6592,7 @@ a {
     text-align: center !important;
   }
 
-  .page-hero__content__row-two .link {
+  .page-hero__link-box {
     height: 200px;
   }
 
@@ -7609,8 +7647,17 @@ a {
     text-align: center !important;
   }
 
-  .page-hero__content__row-two .link__decor-number {
+  .page-hero__link-box {
+    padding: 20px 15px;
+    height: 195px;
+  }
+
+  .page-hero__link-decor {
     font-size: 16px;
+  }
+
+  .page-en_youtube__content-box {
+    height: 50vw;
   }
 }
 
@@ -8677,16 +8724,12 @@ a {
     padding: 23px 163px;
   }
 
-  .page-hero__content__row-two .link__box {
-    padding: 20px;
+  .page-hero__link-box {
+    height: 200px;
   }
 
-  .page-hero__content__row-two .link__decor-number {
+  .page-hero__link-decor {
     font-size: 24px;
-  }
-
-  .page-hero__content__row-two .link {
-    height: 245px;
   }
 
   .page-marketing-madrid__header {
@@ -8695,6 +8738,11 @@ a {
 
   .page-marketing-madrid__dropdown-text {
     font-size: 24px;
+  }
+
+  .page-en_youtube__header h2,
+  .page-en_youtube__header .h2 {
+    font-size: 50px;
   }
 
   .page-footer__top-title {
@@ -9847,23 +9895,29 @@ a {
     font-size: 2.25rem !important;
   }
 
-  .page-hero__content__row-two .link__info-name {
+  .page-hero__link-box {
+    height: 245px;
     font-size: 20px;
   }
 
   .page-marketing-madrid__header {
     font-size: 86px;
   }
+
+  .page-en_youtube__header h2,
+  .page-en_youtube__header .h2 {
+    font-size: 86px;
+  }
 }
 
-@media (min-width: 1676px) {
+@media (min-width: 1696px) {
   .container-xxl,
   .container-xl,
   .container-lg,
   .container-md,
   .container-sm,
   .container {
-    max-width: 1646px;
+    max-width: 1666px;
   }
 
   .col-xxl {
@@ -10907,12 +10961,18 @@ a {
     font-size: 100px;
   }
 
-  .page-hero__content__row-two .link__info-name {
+  .page-hero__link-box {
     font-size: 36px;
+  }
+
+  .page-en_youtube__content-box {
+    width: 798px;
+    height: 665px;
+    padding: 0 !important;
   }
 }
 
-@media (max-width: 1675.98px) {
+@media (max-width: 1695.98px) {
   .offcanvas-xxl {
     position: fixed;
     bottom: 0;
@@ -10997,7 +11057,7 @@ a {
   }
 }
 
-@media (max-width: 1675.98px) and (prefers-reduced-motion: reduce) {
+@media (max-width: 1695.98px) and (prefers-reduced-motion: reduce) {
   .offcanvas-xxl {
     transition: none;
   }

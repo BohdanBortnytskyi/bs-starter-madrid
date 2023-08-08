@@ -38,6 +38,20 @@ collapseElement.addEventListener('hide.bs.collapse', function () {
   btnText.textContent = 'Leer más';
 });
 
+const video = document.getElementById('video');
+const overlay = document.querySelector('.video-overlay');
+
+overlay.addEventListener('mouseenter', () => {
+  overlay.style.display = 'none';
+  video.play();
+});
+
+video.addEventListener('mouseout', () => {
+  if (!video.paused) {
+    overlay.style.display = 'block';
+    video.pause();
+  }
+});
 
 
 

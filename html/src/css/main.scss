@@ -53,7 +53,7 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1676px,
+  xxl: 1696px,
   // mega : 1920px
 );
 
@@ -85,7 +85,7 @@ $container-max-widths: (
   md: 738px,
   lg: 960px,
   xl: 1160px,
-  xxl: 1646px,
+  xxl: 1666px,
   mega : 1920px
 );
 
@@ -149,4 +149,5 @@ $container-max-widths: (
 @import 'modules/header';
 @import 'modules/hero';
 @import 'modules/markiting';
+@import 'modules/en_youtube';
 @import 'modules/footer';

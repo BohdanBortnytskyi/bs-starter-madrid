@@ -18,20 +18,76 @@
         &-btn {
             font-size: 16px;
             padding: 7px 40px;
+
             @include media-breakpoint-up(lg) {
                 font-size: 20px;
                 padding: 23px 163px;
             }
+
             transition: all .3s;
+
             &:hover {
                 animation: pulsate__white 2s infinite;
-            
+
+            }
+        }
+    }
+
+    &__link {
+        &-box{
+            padding: 10px;
+            min-height: 111px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-transform: uppercase;
+            font-size: 14px;
+            @include media-breakpoint-up(xl) {
+                height: 245px;
+                font-size: 20px;
+            }
+            @include media-breakpoint-up(xxl) {
+                font-size: 36px;
             }
             
+            @include media-breakpoint-up(lg) {
+                height: 200px;
+            }
+            @include media-breakpoint-up(md) {
+                padding: 20px 15px;
+                height: 195px;
+            }
+            @include media-breakpoint-up(sm) {
+                height: 200px;
+            }
+    
+        }
+        &-icon{
+            width: 1.3em;
+            object-fit: contain;
+        }
+        &-decor{
+            font-size: 11px;
 
-           
+            @include media-breakpoint-up(md) {
+                font-size: 16px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                font-size: 24px;
+        }
+    }
+        &-number {
+            
         }
 
+        &-arrow {
+            transform: rotate(180deg);
+            width: 1em;
+            height: 1em;
+        }
+       
+       
     }
 
     &__content {
@@ -41,74 +97,11 @@
             width: 100%;
         }
 
-        &__row-one {
-           
-
-        }
+        &__row-one {}
 
         &__row-two {
-            .link {
-                
-                &__box{
-                    padding: 10px;
-
-                    @include media-breakpoint-up(lg) {
-                        padding: 20px;
-                    }
-                    transition: all .3s;
-                    &:hover{
-                        background-color: #fff !important;
-                    }
-                    
-                }
-                &__info {
-                    &-name {
-                        font-size: 14px;
-
-                        @include media-breakpoint-up(xl) {
-                            font-size: 20px;
-                        }
-
-                        @include media-breakpoint-up(xxl) {
-                            font-size: 36px;
-                        }
-                    }
-                }
-                &__decor {
-                    &-number {
-                        font-size: 11px;
-
-                        @include media-breakpoint-up(md) {
-                            font-size: 16px;
-                        }
-
-                        @include media-breakpoint-up(lg) {
-                            font-size: 24px;
-                        }
-                    }
-
-                    &-icon {
-                        transform: rotate(180deg);
-                    }
-                }
-
-                height: 111px;
-                font-size: 36px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: normal;
-                text-transform: uppercase;
-
-                @include media-breakpoint-up(sm) {
-                    height: 200px;
-                }
-
-                @include media-breakpoint-up(lg) {
-                    height: 245px;
-                }
-               
-            }
             
+
         }
     }
 }

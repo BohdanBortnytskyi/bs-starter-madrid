@@ -39,6 +39,18 @@ collapseElement.addEventListener('hide.bs.collapse', function () {
   arrowIcon.classList.remove('rotate-up');
   btnText.textContent = 'Leer más';
 });
+var video = document.getElementById('video');
+var overlay = document.querySelector('.video-overlay');
+overlay.addEventListener('mouseenter', function () {
+  overlay.style.display = 'none';
+  video.play();
+});
+video.addEventListener('mouseout', function () {
+  if (!video.paused) {
+    overlay.style.display = 'block';
+    video.pause();
+  }
+});
 
 /***/ })
 
