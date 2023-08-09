@@ -1,4 +1,5 @@
 // Importing JavaScript
+
 //
 // You have two choices for including Bootstrap's JS files—the whole thing,
 // or just the bits that you need.
@@ -20,7 +21,6 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 // import "bootstrap/js/dist/util/index";
 // import "bootstrap/js/dist/modal.js";
-// import "bootstrap/js/dist/popover";
 
 
 const collapseElement = document.getElementById('collapseExample');
@@ -52,7 +52,17 @@ video.addEventListener('mouseout', () => {
     video.pause();
   }
 });
+const outerBlock = document.querySelector('.page-business_solutions__header');
+const innerElement = document.querySelector('.page-business_solutions__header-text');
 
+document.addEventListener('scroll', () => {
+  const blockRect = outerBlock.getBoundingClientRect();
+  const textHeight =  innerElement.getBoundingClientRect().height;
+  const windowHeight = window.innerHeight;
 
-
-
+  if (blockRect.top + blockRect.height / 2 <= windowHeight) {
+    innerElement.style.top = blockRect.height-textHeight+"px";
+  } else {
+    innerElement.style.top = '0';
+  }
+});

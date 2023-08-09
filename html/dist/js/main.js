@@ -25,7 +25,6 @@ __webpack_require__.r(__webpack_exports__);
 // import "node_modules/popper.js/dist/popper.min.js";
 // import "bootstrap/js/dist/util/index";
 // import "bootstrap/js/dist/modal.js";
-// import "bootstrap/js/dist/popover";
 
 var collapseElement = document.getElementById('collapseExample');
 var btnElement = document.querySelector('[data-bs-toggle="collapse"]');
@@ -49,6 +48,19 @@ video.addEventListener('mouseout', function () {
   if (!video.paused) {
     overlay.style.display = 'block';
     video.pause();
+  }
+});
+var outerBlock = document.querySelector('.page-business_solutions__header');
+var innerElement = document.querySelector('.page-business_solutions__header-text');
+document.addEventListener('scroll', function () {
+  var blockRect = outerBlock.getBoundingClientRect();
+  var textHeight = innerElement.getBoundingClientRect().height;
+  var windowHeight = window.innerHeight;
+
+  if (blockRect.top + blockRect.height / 2 <= windowHeight) {
+    innerElement.style.top = blockRect.height - textHeight + "px";
+  } else {
+    innerElement.style.top = '0';
   }
 });
 

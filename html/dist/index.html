@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="./css/main.css">
 </head>
 
-<body>
+<body class="bg-primary">
   <!-- header start -->
   <header class="page-header sticky-top border-bottom d-lg-flex align-items-center">
     <div class=" px-0 h-100 container">
@@ -84,7 +84,7 @@
             </div>
           </div>
 
-          <div class="contacts bg-violet d-flex align-items-center py-0 px-3 h-100 ms-3">
+          <div class="contacts bg-violet btn-hover--violet d-flex align-items-center py-0 px-3 h-100 ms-3">
             <p class="me-3 my-0">Contactanos</p>
             <svg class="arrow" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M25 25L1 0.999998M1 0.999998L1 24.04M1 0.999998L24.04 1" stroke-width="1.5"
@@ -108,7 +108,7 @@
             <h1 class="page-hero__title text-uppercase text-start text-white">Club</h1>
             <h1 class="page-hero__title text-uppercase text-center text-white">de marketing</h1>
             <h1 class="page-hero__title text-uppercase text-end text-white">de Madrid</h1>
-             <a href="#" class="page-hero__title-btn mt-2 rounded bg-white flex-shrink-0 align-self-center align-self-xl-end">Unirse</a>
+             <a href="#" class="page-hero__title-btn btn-hover--white mt-2 rounded bg-white flex-shrink-0 align-self-center align-self-xl-end">Unirse</a>
           </div>
          
         </div>
@@ -164,7 +164,7 @@
     </div>
   </div>
 </section>
-<section class="page-marketing-madrid bg-primary pt-5">
+<section class="page-marketing-madrid pt-5">
     <div class="container position-relative ">
         <div class="row mb-4 d-sm-flex align-items-center">
             <header class="page-marketing-madrid__header text-white col-sm-9">Llamamiento a los compañeros de marketing de Madrid </header>
@@ -194,7 +194,7 @@
        </div>
     </div>
 </section>
-<section class="page-en_youtube bg-primary">
+<section class="page-en_youtube">
     <div class="container">
         <header class="page-en_youtube__header py-5 text-white">
             <h2>Estamos en YouTube</h2>
@@ -225,8 +225,45 @@
                 <video id="video"  src="ocean.mp4"></video>
             </div>
         </div>
+       <div class="row justify-content-center">
+        <div class="col-4 my-5 p-0">
+            <a href="#" class="page-en_youtube__btn btn btn-yellow btn-hover--yellow text-uppercase w-100">más en YouTube</a>
+        </div>
+       </div>
     </div>
 </section> 
+<section class="page-inspiration my-5 py-md-5">
+    <div class=" container-fluid container-md">
+        <div class="row">
+            <div class="col-12 p-0">
+                <div class="page-inspiration__box w-100 m-0 row d-flex flex-column align-items-center px-5 py-5">
+                    <div class="col page-inspiration__text text-white text-center fw-semibold">Creemos que cada persona que se dedique al marketing, tiene habilidades e ideas únicas que pueden hacer una valiosa contribución a nuestra profesión.
+                        Queremos inspirarte para que seas el mejor entre los mejores.</div>
+                    <div class="col-4 p-0">
+                        <a href="" class="page-inspiration__btn btn bg-white btn-hover--white mt-5 text-uppercase w-100">Unirse</a>
+
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-business_solutions">
+    <div class="container">
+        <div class="row row-cols-2 ">
+            <div class="col-12">
+                <header class="page-business_solutions__header text-center text-white">
+                    <h2 id="my-element" class="page-business_solutions__header-text my-element inner-element z-2">Las mejores soluciones comerciales con la ayuda del contenido audiovisual</h2>
+                    <video class="page-business_solutions__header-video" src="ocean.mp4" autoplay loop></video>
+                    <span  class="page-business_solutions__header-video_overlay"></span>
+                </header>
+            </div>
+            <div class="col-6"></div>
+            <div class="col-6"></div>
+        </div>
+    </div>
+</section>
+
 </main>
 <!-- main end -->
 <footer class="page-footer border-top text-white bg-primary p-3">
@@ -263,6 +300,7 @@
   </div>
 </footer>
 </body>
+
 <script src="./js/vendor.js"></script>
 <script src="./js/main.js"></script>
 </html>

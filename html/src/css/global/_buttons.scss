@@ -1,0 +1,20 @@
+.btn-hover{
+    &--white:hover{
+        &:hover {
+            animation: pulsate__white 2s infinite;
+
+        }
+    }
+    &--yellow:hover{
+        &:hover {
+            animation: pulsate__yellow 2s infinite;
+
+        }
+    }
+    &--violet:hover{
+        &:hover {
+            animation: pulsate__violet 2s infinite;
+
+        }
+    }
+}   

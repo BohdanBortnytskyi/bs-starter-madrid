@@ -27,7 +27,8 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(0, 0, 0, 0.5);
+                
+                background-color: rgba($primary, 0.5);
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -40,6 +41,9 @@
             height: 60vw;
             @include media-breakpoint-up(md) {
                 height: 50vw;
+            }
+            @include media-breakpoint-up(xl) {
+              height: 40vw;
             }
             @include media-breakpoint-up(xxl) {
                 width: 798px;
@@ -54,5 +58,21 @@
                 object-fit: cover;
             }
         }
+    }
+    &__btn{
+        padding: 7px 10px;
+        font-size: 16px;
+        @include media-breakpoint-up(md) {
+            padding: 15px 0;
+            font-size: 18px;
+        }
+        @include media-breakpoint-up(lg) {
+            
+            font-size: 20px;
+        }
+        @include media-breakpoint-up(xl) {
+            padding: 23px 0;
+        }
+
     }
 }
