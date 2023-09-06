@@ -1,0 +1,36 @@
+.page-about-us{
+    margin:100px 0;
+    @include media-breakpoint-up(lg) {
+        margin:200px 0;
+     }
+    @include media-breakpoint-up(xl) {
+        margin:300px 0;
+     }
+    &__header{
+        text-align: center;
+        margin-bottom: 70px;
+        @include media-breakpoint-up(lg) {
+           text-align: left;
+         }
+        @include media-breakpoint-up(xl) {
+          margin-bottom: 90px;
+        }
+       
+    }
+    &__text{
+        font-weight: 400;
+        @include media-breakpoint-up(xl) {
+            font-size: 24px;
+            line-height: 38px;
+        }
+    }
+    &__img{
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%) rotate(0deg);
+        animation: rotate_2 30s linear infinite;
+       
+    }
+   
+}

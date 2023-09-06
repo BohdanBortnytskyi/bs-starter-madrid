@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="en">
+<html class="page" lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -25,7 +25,10 @@
   <link rel="apple-touch-icon" sizes="167x167" href="./img/favicons/apple-touch-icon-167x167.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon-180x180.png">
   <link rel="apple-touch-icon" sizes="1024x1024" href="./img/favicons/apple-touch-icon-1024x1024.png">
-  
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
   <link rel="stylesheet" href="./css/main.css">
 </head>
 
@@ -100,8 +103,10 @@
   <main class="wrapper">
     <!-- main start -->
 <section class="page-hero">
-  <div class="container-fluid">
+  <div class="container-fluid position-relative">
     <div class="page-hero__inner">
+      <div class="gradient-1 position-absolute z-n1"></div>
+      <div class="gradient-2 position-absolute z-n1"></div>
       <div class="page-hero__content__row-one row">
         <div class="col-12 col-xl-6 p-0 d-flex flex-column justify-content-center align-items-center ">
           <div class="page-hero__title-box d-inline-flex flex-column my-3">
@@ -113,11 +118,11 @@
          
         </div>
         <div class="col-12 col-xl-6 p-0">
-          <video class="page-hero__content-video" autoplay loop src="ocean.mp4"></video>
+          <video class="page-hero__content-video" autoplay loop muted src="ocean.mp4"></video>
         </div>
       </div>
       <div class="page-hero__content__row-two row">
-        <div class="col bg-primary d-flex justify-content-center align-items-center py-5">
+        <div class="page-hero__content__links col bg-primary d-flex justify-content-center align-items-center py-5">
           <div class="row row-cols-2 flex-wrap g-2 col-10 ">
             <div class="col-12 col-md-7 position-relative">
               <div class="page-hero__link-box bg-violet rounded d-flex flex-column justify-content-between">
@@ -157,8 +162,8 @@
            
           </div>
         </div>
-        <div class="col-lg d-none d-xl-flex align-items-center justify-content-center">
-          <img src="img/logo2.svg" alt="" class="">
+        <div class="page-hero__content__logo_box col-6 d-none d-xl-flex align-items-center justify-content-center">
+          <img class='page-hero__content__logo' src="img/logo_hero.gif" alt="" class="">
         </div>
       </div>
     </div>
@@ -204,25 +209,25 @@
                 <div class="video-overlay">
                     <img src="img/icon-play.svg" alt="Play Icon" class="play-icon">
                   </div>
-                <video id="video" src="ocean.mp4"></video>
+                <video class="video" muted src="ocean.mp4"></video>
             </div>
             <div class="page-en_youtube__content-box col-12 col-md-6">
                 <div class="video-overlay">
                     <img src="img/icon-play.svg" alt="Play Icon" class="play-icon">
                   </div>
-                <video id="video" src="ocean.mp4"></video>
+                <video class="video" loop muted src="ocean.mp4"></video>
             </div>
             <div class="page-en_youtube__content-box col-12 col-md-6">
                 <div class="video-overlay">
                     <img src="img/icon-play.svg" alt="Play Icon" class="play-icon">
                   </div>
-                <video id="video"  src="ocean.mp4"></video>
+                <video class="video" muted loop src="ocean.mp4"></video>
             </div>
             <div class="page-en_youtube__content-box col-12 col-md-6">
                 <div class="video-overlay">
                     <img src="img/icon-play.svg" alt="Play Icon" class="play-icon">
                   </div>
-                <video id="video"  src="ocean.mp4"></video>
+                <video class="video" muted  src="ocean.mp4"></video>
             </div>
         </div>
        <div class="row justify-content-center">
@@ -241,7 +246,6 @@
                         Queremos inspirarte para que seas el mejor entre los mejores.</div>
                     <div class="col-4 p-0">
                         <a href="" class="page-inspiration__btn btn bg-white btn-hover--white mt-5 text-uppercase w-100">Unirse</a>
-
                     </div>    
                 </div>
             </div>
@@ -249,24 +253,466 @@
     </div>
 </section>
 <section class="page-business_solutions">
-    <div class="container">
-        <div class="row row-cols-2 ">
-            <div class="col-12">
-                <header class="page-business_solutions__header text-center text-white">
-                    <h2 id="my-element" class="page-business_solutions__header-text my-element inner-element z-2">Las mejores soluciones comerciales con la ayuda del contenido audiovisual</h2>
-                    <video class="page-business_solutions__header-video" src="ocean.mp4" autoplay loop></video>
+    <div class="container-fluid container-md overflow-hidden px-0">
+        <div class="grid column-gap-md-5 row-gap-0" >
+            <div class="g-col-12 px-0 mb-5">
+                <div class="page-business_solutions__header text-center text-white">
+                    <h2 id="my-element" class="page-business_solutions__header-text my-element inner-element z-2 w-100">Las mejores soluciones comerciales con la ayuda del contenido audiovisual</h2>
+                    <video class="page-business_solutions__header-video rounded-md-4"  src="ocean.mp4" autoplay loop muted></video>
                     <span  class="page-business_solutions__header-video_overlay"></span>
-                </header>
+                </div>
             </div>
-            <div class="col-6"></div>
-            <div class="col-6"></div>
+            <div class="g-col-12 g-col-md-6 px-0 " >
+                <div class="page-business_solutions__card page-business_solutions__card--left p-3 row m-0 align-items-center rounded-md-4">
+                    <p class=" text-white m-0 col-8">Premios anuales
+                        de contenido
+                        audiovisual 2023</p>
+                </div>
+            </div>
+            <div class="g-col-12 g-col-md-6 px-0">
+                <div class="page-business_solutions__card page-business_solutions__card--right p-3 row m-0 justify-content-end align-items-center rounded-md-4">
+                    <p class="page-business_solutions__card-text text-white m-0 col-8">Creamos una sinergia de genios del marketing para un impacto poderoso</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
+<section class="page-participants_slider my-5">
+    <div class="container">
+        <h2 class="page-participants_slider__header fw-semibold text-uppercase text-white">Nuestros participantes</h2>
+        <div class="page-participants_slider__swiper swiper">
+            <!-- Additional required wrapper -->
+            <div class="page-participants_slider__swiper-wrapper swiper-wrapper">
+                <!-- Slides -->
+                <div class="page-participants_slider__swiper-box swiper-slide d-flex justify-content-center mb-5 mb-lg-0">
+                    <div class="page-participants_slider__swiper-slide bg-white rounded-4 d-inline-block">
+                        <img src="img/swiper_img.jpg" alt="" class="page-participants_slider__swiper-img mb-3">
+                        <p class="page-participants_slider__swiper-title fw-semibold text-uppercase text-secondary">
+                            Carlos García</p>
+                            <div class="d-flex justify-conent-between align-items-center">
+                                <p class="page-participants_slider__swiper-job_title mb-1">CEO</p>
+                                <button class="page-participants_slider__swiper-btn btn ms-auto d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false" aria-controls="collapseExample">
+                                    <img class="page-participants_slider__swiper-arrow" src="img/arrow_card_mobile.svg" alt="">
+                                  </button>
+                            </div>
+                       
+                       
+                        <div
+                            class="page-participants_slider__swiper-description d-flex align-items-center flex-grow-1 position-relative">
+                            
+                            <p class="text-wrap text-grey m-0 collapse" id="collapse">Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.
+                                Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.
+                                Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.</p>
+                            
+                            <button class="page-participants_slider__swiper-btn btn ms-auto d-none d-lg-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false" aria-controls="collapseExample">
+                                <img class="page-participants_slider__swiper-arrow" src="img/arrow_card.svg" alt="">
+                              </button>
+                              
+                        </div>
+                    </div>
+                </div>
+                <div class="page-participants_slider__swiper-box swiper-slide d-flex justify-content-center mb-5 mb-lg-0">
+                    <div class="page-participants_slider__swiper-slide bg-white rounded-4 d-inline-block">
+                        <img src="img/swiper_img.jpg" alt="" class="page-participants_slider__swiper-img mb-3">
+                        <p class="page-participants_slider__swiper-title fw-semibold text-uppercase text-secondary">
+                            Carlos García</p>
+                            <div class="d-flex justify-conent-between align-items-center">
+                                <p class="page-participants_slider__swiper-job_title mb-1">CEO</p>
+                                <button class="page-participants_slider__swiper-btn btn ms-auto d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapseExample">
+                                    <img class="page-participants_slider__swiper-arrow" src="img/arrow_card_mobile.svg" alt="">
+                                  </button>
+                            </div>
+                       
+                       
+                        <div
+                            class="page-participants_slider__swiper-description d-flex align-items-center flex-grow-1 position-relative">
+                            
+                            <p class="text-wrap text-grey m-0 collapse" id="collapse1">Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.
+                                Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.
+                                Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.</p>
+                            
+                            <button class="page-participants_slider__swiper-btn btn ms-auto d-none d-lg-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapseExample">
+                                <img class="page-participants_slider__swiper-arrow" src="img/arrow_card.svg" alt="">
+                              </button>
+                              
+                        </div>
+                    </div>
+                </div>
+                <div class="page-participants_slider__swiper-box swiper-slide d-flex justify-content-center mb-5 mb-lg-0">
+                    <div class="page-participants_slider__swiper-slide bg-white rounded-4 d-inline-block">
+                        <img src="img/swiper_img.jpg" alt="" class="page-participants_slider__swiper-img mb-3">
+                        <p class="page-participants_slider__swiper-title fw-semibold text-uppercase text-secondary">
+                            Carlos García</p>
+                            <div class="d-flex justify-conent-between align-items-center">
+                                <p class="page-participants_slider__swiper-job_title mb-1">CEO</p>
+                                <button class="page-participants_slider__swiper-btn btn ms-auto d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapseExample">
+                                    <img class="page-participants_slider__swiper-arrow" src="img/arrow_card_mobile.svg" alt="">
+                                  </button>
+                            </div>
+                       
+                       
+                        <div
+                            class="page-participants_slider__swiper-description d-flex align-items-center flex-grow-1 position-relative">
+                            
+                            <p class="text-wrap text-grey m-0 collapse" id="collapse3">Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.
+                                Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.
+                                Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.</p>
+                            
+                            <button class="page-participants_slider__swiper-btn btn ms-auto d-none d-lg-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapseExample">
+                                <img class="page-participants_slider__swiper-arrow" src="img/arrow_card.svg" alt="">
+                              </button>
+                              
+                        </div>
+                    </div>
+                </div>
+                <div class="page-participants_slider__swiper-box swiper-slide d-flex justify-content-center mb-5 mb-lg-0">
+                    <div class="page-participants_slider__swiper-slide bg-white rounded-4 d-inline-block">
+                        <img src="img/swiper_img.jpg" alt="" class="page-participants_slider__swiper-img mb-3">
+                        <p class="page-participants_slider__swiper-title fw-semibold text-uppercase text-secondary">
+                            Carlos García</p>
+                            <div class="d-flex justify-conent-between align-items-center">
+                                <p class="page-participants_slider__swiper-job_title mb-1">CEO</p>
+                                <button class="page-participants_slider__swiper-btn btn ms-auto d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapseExample">
+                                    <img class="page-participants_slider__swiper-arrow" src="img/arrow_card_mobile.svg" alt="">
+                                  </button>
+                            </div>
+                       
+                       
+                        <div
+                            class="page-participants_slider__swiper-description d-flex align-items-center flex-grow-1 position-relative">
+                            
+                            <p class="text-wrap text-grey m-0 collapse" id="collapse4">Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.
+                                Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.
+                                Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.</p>
+                            
+                            <button class="page-participants_slider__swiper-btn btn ms-auto d-none d-lg-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapseExample">
+                                <img class="page-participants_slider__swiper-arrow" src="img/arrow_card.svg" alt="">
+                              </button>
+                              
+                        </div>
+                    </div>
+                </div>
+                <div class="page-participants_slider__swiper-box swiper-slide d-flex justify-content-center mb-5 mb-lg-0">
+                    <div class="page-participants_slider__swiper-slide bg-white rounded-4 d-inline-block">
+                        <img src="img/swiper_img.jpg" alt="" class="page-participants_slider__swiper-img mb-3">
+                        <p class="page-participants_slider__swiper-title fw-semibold text-uppercase text-secondary">
+                            Carlos García</p>
+                            <div class="d-flex justify-conent-between align-items-center">
+                                <p class="page-participants_slider__swiper-job_title mb-1">CEO</p>
+                                <button class="page-participants_slider__swiper-btn btn ms-auto d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapseExample">
+                                    <img class="page-participants_slider__swiper-arrow" src="img/arrow_card_mobile.svg" alt="">
+                                  </button>
+                            </div>
+                       
+                       
+                        <div
+                            class="page-participants_slider__swiper-description d-flex align-items-center flex-grow-1 position-relative">
+                            
+                            <p class="text-wrap text-grey m-0 collapse" id="collapse5">Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.
+                                Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.
+                                Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.</p>
+                            
+                            <button class="page-participants_slider__swiper-btn btn ms-auto d-none d-lg-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapseExample">
+                                <img class="page-participants_slider__swiper-arrow" src="img/arrow_card.svg" alt="">
+                              </button>
+                              
+                        </div>
+                    </div>
+                </div>
+                <div class="page-participants_slider__swiper-box swiper-slide d-flex justify-content-center mb-5 mb-lg-0">
+                    <div class="page-participants_slider__swiper-slide bg-white rounded-4 d-inline-block">
+                        <img src="img/swiper_img.jpg" alt="" class="page-participants_slider__swiper-img mb-3">
+                        <p class="page-participants_slider__swiper-title fw-semibold text-uppercase text-secondary">
+                            Carlos García</p>
+                            <div class="d-flex justify-conent-between align-items-center">
+                                <p class="page-participants_slider__swiper-job_title mb-1">CEO</p>
+                                <button class="page-participants_slider__swiper-btn btn ms-auto d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapseExample">
+                                    <img class="page-participants_slider__swiper-arrow" src="img/arrow_card_mobile.svg" alt="">
+                                  </button>
+                            </div>
+                       
+                       
+                        <div
+                            class="page-participants_slider__swiper-description d-flex align-items-center flex-grow-1 position-relative">
+                            
+                            <p class="text-wrap text-grey m-0 collapse" id="collapse6">Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.
+                                Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.
+                                Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.</p>
+                            
+                            <button class="page-participants_slider__swiper-btn btn ms-auto d-none d-lg-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapseExample">
+                                <img class="page-participants_slider__swiper-arrow" src="img/arrow_card.svg" alt="">
+                              </button>
+                              
+                        </div>
+                    </div>
+                </div>
+                <div class="page-participants_slider__swiper-box swiper-slide d-flex justify-content-center mb-5 mb-lg-0">
+                    <div class="page-participants_slider__swiper-slide bg-white rounded-4 d-inline-block">
+                        <img src="img/swiper_img.jpg" alt="" class="page-participants_slider__swiper-img mb-3">
+                        <p class="page-participants_slider__swiper-title fw-semibold text-uppercase text-secondary">
+                            Carlos García</p>
+                            <div class="d-flex justify-conent-between align-items-center">
+                                <p class="page-participants_slider__swiper-job_title mb-1">CEO</p>
+                                <button class="page-participants_slider__swiper-btn btn ms-auto d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapseExample">
+                                    <img class="page-participants_slider__swiper-arrow" src="img/arrow_card_mobile.svg" alt="">
+                                  </button>
+                            </div>
+                       
+                       
+                        <div
+                            class="page-participants_slider__swiper-description d-flex align-items-center flex-grow-1 position-relative">
+                            
+                            <p class="text-wrap text-grey m-0 collapse" id="collapse7">Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.
+                                Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.
+                                Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.</p>
+                            
+                            <button class="page-participants_slider__swiper-btn btn ms-auto d-none d-lg-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapseExample">
+                                <img class="page-participants_slider__swiper-arrow" src="img/arrow_card.svg" alt="">
+                              </button>
+                              
+                        </div>
+                    </div>
+                </div>
+                <div class="page-participants_slider__swiper-box swiper-slide d-flex justify-content-center mb-5 mb-lg-0">
+                    <div class="page-participants_slider__swiper-slide bg-white rounded-4 d-inline-block">
+                        <img src="img/swiper_img.jpg" alt="" class="page-participants_slider__swiper-img mb-3">
+                        <p class="page-participants_slider__swiper-title fw-semibold text-uppercase text-secondary">
+                            Carlos García</p>
+                            <div class="d-flex justify-conent-between align-items-center">
+                                <p class="page-participants_slider__swiper-job_title mb-1">CEO</p>
+                                <button class="page-participants_slider__swiper-btn btn ms-auto d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapseExample">
+                                    <img class="page-participants_slider__swiper-arrow" src="img/arrow_card_mobile.svg" alt="">
+                                  </button>
+                            </div>
+                       
+                       
+                        <div
+                            class="page-participants_slider__swiper-description d-flex align-items-center flex-grow-1 position-relative">
+                            
+                            <p class="text-wrap text-grey m-0 collapse" id="collapse8">Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.
+                                Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.
+                                Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.</p>
+                            
+                            <button class=" page-participants_slider__swiper-btn btn ms-auto d-none d-lg-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapseExample">
+                                <img class="page-participants_slider__swiper-arrow" src="img/arrow_card.svg" alt="">
+                              </button>
+                              
+                        </div>
+                    </div>
+                </div>
+                <div class="page-participants_slider__swiper-box swiper-slide d-flex justify-content-center mb-5 mb-lg-0">
+                    <div class="page-participants_slider__swiper-slide bg-white rounded-4 d-inline-block">
+                        <img src="img/swiper_img.jpg" alt="" class="page-participants_slider__swiper-img mb-3">
+                        <p class="page-participants_slider__swiper-title fw-semibold text-uppercase text-secondary">
+                            Carlos García</p>
+                            <div class="d-flex justify-conent-between align-items-center">
+                                <p class="page-participants_slider__swiper-job_title mb-1">CEO</p>
+                                <button class="page-participants_slider__swiper-btn btn ms-auto d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapseExample">
+                                    <img class="page-participants_slider__swiper-arrow" src="img/arrow_card_mobile.svg" alt="">
+                                  </button>
+                            </div>
+                       
+                       
+                        <div
+                            class="page-participants_slider__swiper-description d-flex align-items-center flex-grow-1 position-relative">
+                            
+                            <p class="text-wrap text-grey m-0 collapse" id="collapse9">Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.
+                                Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.
+                                Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.</p>
+                            
+                            <button class="page-participants_slider__swiper-btn btn ms-auto d-none d-lg-block align-self-end" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapseExample">
+                                <img class="page-participants_slider__swiper-arrow" src="img/arrow_card.svg" alt="">
+                              </button>
+                              
+                        </div>
+                    </div>
+                </div>
+                <div class="page-participants_slider__swiper-box swiper-slide d-flex justify-content-center mb-5 mb-lg-0">
+                    <div class="page-participants_slider__swiper-slide bg-white rounded-4 d-inline-block">
+                        <img src="img/swiper_img.jpg" alt="" class="page-participants_slider__swiper-img mb-3">
+                        <p class="page-participants_slider__swiper-title fw-semibold text-uppercase text-secondary">
+                            Carlos García</p>
+                            <div class="d-flex justify-conent-between align-items-center">
+                                <p class="page-participants_slider__swiper-job_title mb-1">CEO</p>
+                                <button class="page-participants_slider__swiper-btn btn ms-auto d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapseExample">
+                                    <img class="page-participants_slider__swiper-arrow" src="img/arrow_card_mobile.svg" alt="">
+                                  </button>
+                            </div>
+                       
+                       
+                        <div
+                            class="page-participants_slider__swiper-description d-flex align-items-center flex-grow-1 position-relative">
+                            
+                            <p class="text-wrap text-grey m-0 collapse" id="collapse10">Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.
+                                Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.
+                                Bajo su guía, el equipo de marketing florece, creando
+                                campañas impactantes que resuenan con las audiencias en todo el mundo.</p>
+                            
+                            <button class="page-participants_slider__swiper-btn btn ms-auto d-none d-lg-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapseExample">
+                                <img class="page-participants_slider__swiper-arrow" src="img/arrow_card.svg" alt="">
+                              </button>
+                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-tool w-100 d-none d-sm-flex justify-content-center justify-content-lg-between">
+                <div class="swiper-pagination d-flex align-items-center"></div>
+                <div class="swiper-controls d-lg-flex d-none">
+                    <button type="button" class="btn btn-outline-violet custom-prev-button rounded-circle me-3">
+                        <span><svg width="29" height="24" viewBox="0 0 29 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.3177 0.182465C12.3758 0.240509 12.4219 0.309439 12.4533 0.385313C12.4848 0.461187 12.501 0.542517 12.501 0.624653C12.501 0.706787 12.4848 0.788116 12.4533 0.863991C12.4219 0.939865 12.3758 1.00879 12.3177 1.06684L2.13487 11.2497L28.1255 11.2497C28.2913 11.2497 28.4502 11.3155 28.5674 11.4327C28.6846 11.5499 28.7505 11.7089 28.7505 11.8747C28.7505 12.0404 28.6846 12.1994 28.5674 12.3166C28.4502 12.4338 28.2913 12.4997 28.1255 12.4997L2.13487 12.4997L12.3177 22.6825C12.3757 22.7405 12.4218 22.8095 12.4532 22.8853C12.4847 22.9612 12.5008 23.0425 12.5008 23.1247C12.5008 23.2068 12.4847 23.2881 12.4532 23.364C12.4218 23.4398 12.3757 23.5088 12.3177 23.5668C12.2596 23.6249 12.1907 23.671 12.1148 23.7024C12.0389 23.7338 11.9576 23.75 11.8755 23.75C11.7934 23.75 11.7121 23.7338 11.6362 23.7024C11.5603 23.671 11.4914 23.6249 11.4333 23.5668L0.183304 12.3168C0.125194 12.2588 0.0790947 12.1899 0.047642 12.114C0.0161893 12.0381 0 11.9568 0 11.8747C0 11.7925 0.0161893 11.7112 0.047642 11.6353C0.0790947 11.5594 0.125194 11.4905 0.183304 11.4325L11.4333 0.182465C11.4913 0.124353 11.5603 0.0782547 11.6362 0.0468025C11.712 0.0153484 11.7934 -0.000839233 11.8755 -0.000839233C11.9576 -0.000839233 12.039 0.0153484 12.1148 0.0468025C12.1907 0.0782547 12.2596 0.124353 12.3177 0.182465Z"
+                                    fill="white" />
+                            </svg>
+                        </span>
+                    </button>
+                    <button type="button" class="btn btn-outline-violet custom-next-button rounded-circle">
+                        <span>
+                            <svg width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.9333 23.5675C16.8752 23.5095 16.8291 23.4406 16.7976 23.3647C16.7662 23.2888 16.75 23.2075 16.75 23.1253C16.75 23.0432 16.7662 22.9619 16.7976 22.886C16.8291 22.8101 16.8752 22.7412 16.9333 22.6832L27.1161 12.5003L1.12548 12.5003C0.959724 12.5003 0.800753 12.4345 0.683544 12.3173C0.566334 12.2001 0.500484 12.0411 0.500484 11.8753C0.500484 11.7096 0.566334 11.5506 0.683544 11.4334C0.800753 11.3162 0.959724 11.2503 1.12548 11.2503L27.1161 11.2503L16.9333 1.06754C16.8752 1.00947 16.8292 0.940528 16.7977 0.864658C16.7663 0.788787 16.7501 0.707469 16.7501 0.625347C16.7501 0.543226 16.7663 0.461908 16.7977 0.386037C16.8292 0.310167 16.8752 0.241229 16.9333 0.18316C16.9914 0.125091 17.0603 0.0790281 17.1362 0.0476015C17.212 0.0161748 17.2934 0 17.3755 0C17.4576 0 17.5389 0.0161748 17.6148 0.0476015C17.6907 0.0790281 17.7596 0.125091 17.8177 0.18316L29.0677 11.4332C29.1258 11.4912 29.1719 11.5601 29.2033 11.636C29.2348 11.7119 29.251 11.7932 29.251 11.8753C29.251 11.9575 29.2348 12.0388 29.2033 12.1147C29.1719 12.1906 29.1258 12.2595 29.0677 12.3175L17.8177 23.5675C17.7596 23.6256 17.6907 23.6717 17.6148 23.7032C17.5389 23.7347 17.4576 23.7508 17.3755 23.7508C17.2934 23.7508 17.212 23.7347 17.1361 23.7032C17.0603 23.6717 16.9913 23.6256 16.9333 23.5675Z"
+                                    fill="white" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<section class="page-events">
+    <div class="container">
+        <h2 class="page-events__header py-5 text-white text-uppercase d-none d-lg-block">Nuestros eventos</h2>
+        <div class="page-events__accordion d-flex flex-column flex-xl-row">
+          <div class="page-events__accordion_item rounded-4 d-flex flex-column p-4 expand">
+            <div class="page-events__accordion_item-top d-flex justify-content-between justify-content-lg-center align-items-center mb-3">
+              <p class="page-events__accordion_item-title mb-3">Reuniones temáticas</p>
+              <img class="page-events__accordion_item-status d-lg-none" src="img/arrow_accordion.svg" alt=""></div>
+              <p class="page-events__accordion_item-text m-0 overflow-y-auto">
+                Para ahorrar tiempo a nuestros compañeros, hacemos eventos online utilizando diversas plataformas y herramientas de comunicación. Estas pueden ser webinars, conferencias virtuales, seminarios online u otros formatos que permiten a los especialistas en marketing de todo el mundo reunirse, debatir temas actuales, compartir conocimientos y experiencias, así como hacer preguntas y recibir respuestas de expertos en el campo del marketing.
+                Para ahorrar tiempo a nuestros compañeros, hacemos eventos online utilizando diversas plataformas y herramientas de comunicación. Estas pueden ser webinars, conferencias virtuales, seminarios online u otros formatos que permiten a los especialistas en marketing de todo el mundo reunirse, debatir temas actuales, compartir conocimientos y experiencias, así como hacer preguntas y recibir respuestas de expertos en el campo del marketing.
+              </p>
+          </div>
+          
+          <div class="page-events__accordion_item rounded-4 d-flex flex-column p-4 small">
+            <div class="page-events__accordion_item-top d-flex justify-content-between justify-content-lg-center align-items-center mb-3">
+              <p class="page-events__accordion_item-title mb-3">Eventos online</p>
+              <img class="page-events__accordion_item-status d-lg-none" src="img/arrow_accordion.svg" alt="">
+            </div>
+              <p class="page-events__accordion_item-text m-0 overflow-y-auto">
+                Para ahorrar tiempo a nuestros compañeros, hacemos eventos online utilizando diversas plataformas y herramientas de comunicación. Estas pueden ser webinars, conferencias virtuales, seminarios online u otros formatos que permiten a los especialistas en marketing de todo el mundo reunirse, debatir temas actuales, compartir conocimientos y experiencias, así como hacer preguntas y recibir respuestas de expertos en el campo del marketing.
+                Para ahorrar tiempo a nuestros compañeros, hacemos eventos online utilizando diversas plataformas y herramientas de comunicación. Estas pueden ser webinars, conferencias virtuales, seminarios online u otros formatos que permiten a los especialistas en marketing de todo el mundo reunirse, debatir temas actuales, compartir conocimientos y experiencias, así como hacer preguntas y recibir respuestas de expertos en el campo del marketing.
+              </p>
+          </div>
+          
+            <div class="page-events__accordion_item rounded-4 d-flex flex-column p-4 small">
+              <div class="page-events__accordion_item-top d-flex justify-content-between justify-content-lg-center align-items-center mb-3">
+                <p class="page-events__accordion_item-title mb-3">Business lunches </p>
+                <img class="page-events__accordion_item-status d-lg-none" src="img/arrow_accordion.svg" alt=""></div>
+                <p class="page-events__accordion_item-text m-0 overflow-y-auto">
+                  Para ahorrar tiempo a nuestros compañeros, hacemos eventos online utilizando diversas plataformas y herramientas de comunicación. Estas pueden ser webinars, conferencias virtuales, seminarios online u otros formatos que permiten a los especialistas en marketing de todo el mundo reunirse, debatir temas actuales, compartir conocimientos y experiencias, así como hacer preguntas y recibir respuestas de expertos en el campo del marketing.
+                  Para ahorrar tiempo a nuestros compañeros, hacemos eventos online utilizando diversas plataformas y herramientas de comunicación. Estas pueden ser webinars, conferencias virtuales, seminarios online u otros formatos que permiten a los especialistas en marketing de todo el mundo reunirse, debatir temas actuales, compartir conocimientos y experiencias, así como hacer preguntas y recibir respuestas de expertos en el campo del marketing.
+                </p>
+            </div>
+            <div class="page-events__accordion_item rounded-4 d-flex flex-column p-4 small">
+              <div class="page-events__accordion_item-top d-flex justify-content-between justify-content-lg-center align-items-center mb-3">
+                <p class="page-events__accordion_item-title mb-3">Forums de marketing </p>
+                <img class="page-events__accordion_item-status d-lg-none" src="img/arrow_accordion.svg" alt=""></div>
+                <p class="page-events__accordion_item-text m-0 overflow-y-auto">
+                  Para ahorrar tiempo a nuestros compañeros, hacemos eventos online utilizando diversas plataformas y herramientas de comunicación. Estas pueden ser webinars, conferencias virtuales, seminarios online u otros formatos que permiten a los especialistas en marketing de todo el mundo reunirse, debatir temas actuales, compartir conocimientos y experiencias, así como hacer preguntas y recibir respuestas de expertos en el campo del marketing.
+                  Para ahorrar tiempo a nuestros compañeros, hacemos eventos online utilizando diversas plataformas y herramientas de comunicación. Estas pueden ser webinars, conferencias virtuales, seminarios online u otros formatos que permiten a los especialistas en marketing de todo el mundo reunirse, debatir temas actuales, compartir conocimientos y experiencias, así como hacer preguntas y recibir respuestas de expertos en el campo del marketing.
+                </p>
+            </div>
+            <div class="page-events__accordion_item rounded-4 d-flex flex-column p-4 small">
+              <div class="page-events__accordion_item-top d-flex justify-content-between justify-content-lg-center align-items-center mb-3">
+                <p class="page-events__accordion_item-title mb-3">Premios anuales de contenido audiovisual 2023</p>
+                <img class="page-events__accordion_item-status d-lg-none" src="img/arrow_accordion.svg" alt=""></div>
+                <p class="page-events__accordion_item-text m-0 overflow-y-auto">
+                  Para ahorrar tiempo a nuestros compañeros, hacemos eventos online utilizando diversas plataformas y herramientas de comunicación. Estas pueden ser webinars, conferencias virtuales, seminarios online u otros formatos que permiten a los especialistas en marketing de todo el mundo reunirse, debatir temas actuales, compartir conocimientos y experiencias, así como hacer preguntas y recibir respuestas de expertos en el campo del marketing.
+                  Para ahorrar tiempo a nuestros compañeros, hacemos eventos online utilizando diversas plataformas y herramientas de comunicación. Estas pueden ser webinars, conferencias virtuales, seminarios online u otros formatos que permiten a los especialistas en marketing de todo el mundo reunirse, debatir temas actuales, compartir conocimientos y experiencias, así como hacer preguntas y recibir respuestas de expertos en el campo del marketing.
+                </p>
+            </div>
+            <div class="page-events__accordion_item rounded-4 d-flex flex-column p-4 small">
+              <div class="page-events__accordion_item-top d-flex justify-content-between justify-content-lg-center align-items-center mb-3">
+                <p class="page-events__accordion_item-title mb-3">Reuniones de mesa redonda</p>
+                <img class="page-events__accordion_item-status d-lg-none" src="img/arrow_accordion.svg" alt=""></div>
+                <p class="page-events__accordion_item-text m-0 overflow-y-auto">
+                  Para ahorrar tiempo a nuestros compañeros, hacemos eventos online utilizando diversas plataformas y herramientas de comunicación. Estas pueden ser webinars, conferencias virtuales, seminarios online u otros formatos que permiten a los especialistas en marketing de todo el mundo reunirse, debatir temas actuales, compartir conocimientos y experiencias, así como hacer preguntas y recibir respuestas de expertos en el campo del marketing.
+                  Para ahorrar tiempo a nuestros compañeros, hacemos eventos online utilizando diversas plataformas y herramientas de comunicación. Estas pueden ser webinars, conferencias virtuales, seminarios online u otros formatos que permiten a los especialistas en marketing de todo el mundo reunirse, debatir temas actuales, compartir conocimientos y experiencias, así como hacer preguntas y recibir respuestas de expertos en el campo del marketing.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-about-us position-relative">
+    <div class="container ">
+        <h2 class="page-about-us__header text-uppercase text-white">
+            sobre nosotros
+        </h2>
+        <div class="page-about-us__text text-white">
+            Somos un equipo de entusiastas del marketing que tenían el sueño de unirse con colegas afines para crecer y desarrollarse juntos. ¡Logramos hacer realidad nuestro anhelado sueño! Creamos una comunidad de profesionales donde los especialistas en marketing pueden mostrar sus logros, compartir ideas y recibir apoyo de sus colegas.<br> 
+            Nuestra ideología tiene como objetivo mejorar la calidad del trabajo y aumentar las habilidades profesionales de los especialistas en marketing a través del aprendizaje en equipo y el intercambio de experiencias.
+        </div>
+        <img src="img/sobre_img.svg" alt="" class="page-about-us__img position-absolute object-fit-cover w-75">
+    </div>
+</section>
+<section class="page-our_blog">
+    <div class="container">
+        <h2 class="page-our_blog__header"></h2>
+        <div class="page-our_blog__grid collapse grid">
+            <div class="g-col-3 page-our_blog__item">
+                <img width="330" height="215" src="img/our_blog.jpg" alt="" class="page-our_blog__item-img rounded-4">
+                <p class="page-our_blog__item-title">El Poder de la Mercadotecnia: Estrategias para el Éxito Empresarial</p>
+                <p class="page-our_blog__item-description collapse">Introducción:<br>La mercadotecnia, o marketing en inglés, es una disciplina fundamental en el mundo empresarial que busca entender las necesidades y deseos de los consumidores para crear, comunicar y entregar valor a través de productos y servicio</p>
+                <div class="page-our_blog__item-footer d-flex justify-content-between align-items-center">
+                    <p class="page-our_blog__item-reading_time">Lectura de 3 minutos</p>
+                    <button class="page-our_blog__item-btn btn d-flex">Leer
+                        <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.068 0.625L21 3.99995L17.068 7.375V6.025L18.892 4.4773H0.75V3.5227H18.892L17.068 1.975V0.625Z" fill="white"/>
+                            </svg>                            
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 </main>
 <!-- main end -->
-<footer class="page-footer border-top text-white bg-primary p-3">
+<footer class="page-footer border-top text-white bg-primary p-3 z-n1">
   <div class="container">
     <div class="row">
       <div class="d-flex flex-column flex-xl-row">
@@ -300,7 +746,7 @@
   </div>
 </footer>
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="./js/vendor.js"></script>
 <script src="./js/main.js"></script>
 </html>

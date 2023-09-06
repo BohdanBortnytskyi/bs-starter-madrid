@@ -6,13 +6,14 @@
 
 // Colors
 //
-$transition-collapse:         height .1s ease;
-$primary    : #1A1A1A;
-$secondary  : #0A0A0A;
-$orange     : #F08377;
-$yellow     : #FECE63;
-$violet     : #9576FD;
-$grey       : #818181;
+$transition-collapse: height .1s ease;
+$primary : #1A1A1A;
+$secondary : #0A0A0A;
+$orange : #F08377;
+$yellow : #FECE63;
+$violet : #9576FD;
+$grey : #4E4E4E;
+$enable-cssgrid: true;
 
 
 // Quickly modify global styling by enabling or disabling optional features.
@@ -56,19 +57,19 @@ $grid-breakpoints: (
   xxl: 1696px,
   // mega : 1920px
 );
-
-
-// Theme map
 $custom-colors: (
   "grey"    : $grey,
   "orange"  : $orange,
   "violet"  : $violet,
   "yellow"  : $yellow,
+  'secondary' : $secondary,
   'primary' : $primary
 );
 
 // Merge the maps
 $theme-colors: map-merge($theme-colors, $custom-colors);
+
+
 //---------------------------------------------------------------------------------------------------------------------
 
 
@@ -89,6 +90,8 @@ $container-max-widths: (
   mega : 1920px
 );
 
+
+
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
 // 5. Include remainder of required parts
@@ -107,9 +110,10 @@ $container-max-widths: (
 @import "node_modules/bootstrap/scss/grid";
 @import "node_modules/bootstrap/scss/helpers";
 
-// @import "bootstrap/scss/tables";
+// @import "node_modules/bootstrap/scss/tables";
 // @import "bootstrap/scss/forms";
 @import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/accordion";
 @import "node_modules/bootstrap/scss/transitions";
 @import "node_modules/bootstrap/scss/offcanvas";
 @import "node_modules/bootstrap/scss/dropdown";
@@ -142,6 +146,27 @@ $container-max-widths: (
 @import "node_modules/bootstrap/scss/utilities/api";
 
 // 8. Add additional custom code here
+$values: (
+null: var(--#{$prefix}border-radius),
+0: 0,
+1: var(--#{$prefix}border-radius-sm),
+2: var(--#{$prefix}border-radius),
+3: var(--#{$prefix}border-radius-lg),
+4: var(--#{$prefix}border-radius-xl),
+5: var(--#{$prefix}border-radius-xxl),
+circle: 50%,
+pill: var(--#{$prefix}border-radius-pill)
+);
+@each $breakpoint in map-keys($grid-breakpoints) {
+
+  @each $value, $length in $values {
+    @include media-breakpoint-up($breakpoint) {
+      .rounded-#{$breakpoint}-#{$value} {
+        border-radius: $length !important;
+      }
+    }
+  }
+}
 
 @import 'global/global';
 @import 'global/animations';
@@ -153,4 +178,7 @@ $container-max-widths: (
 @import 'modules/en_youtube';
 @import 'modules/inspiration';
 @import 'modules/business_solutions';
+@import 'modules/participants_slider';
+@import 'modules/about_us';
+@import 'modules/events';
 @import 'modules/footer';

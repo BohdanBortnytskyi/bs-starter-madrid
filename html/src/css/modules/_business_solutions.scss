@@ -1,25 +1,41 @@
 .page-business_solutions {
     &__header {
-        height: 940px;
+        height: calc(50vw + 200px);
         position: relative;
 
         &-text {
             position: absolute;
             top: 0;
             transition: top 2s ease;
-            font-size: 64px;
-
+            font-size: 16px;
             font-weight: 800;
-
             text-transform: uppercase;
+            @include media-breakpoint-up(sm) {
+                font-size: 24px;
+            }
+            @include media-breakpoint-up(md) {
+                font-size: 36px;
+            }
+
+            @include media-breakpoint-up(xl) {
+                font-size: 48px;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                font-size: 64px;
+            }
         }
 
         &-video {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 20px;
-            &_overlay{
+
+            @include media-breakpoint-up(md) {
+                // border-radius: 20px;
+            }
+
+            &_overlay {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -27,6 +43,88 @@
                 height: 100%;
                 background-color: rgba($primary, 0.5);
             }
+        }
+    }
+  
+    &__card {
+        min-height: 125px;
+        // border-radius: 20px;
+        @include media-breakpoint-up(md) {
+            min-height: 150px;
+        }
+        @include media-breakpoint-up(lg) {
+            min-height: 200px;
+        }
+        @include media-breakpoint-up(xl) {
+            min-height: 250px;
+        }
+        @include media-breakpoint-up(xxl) {
+            min-height: 285px;
+        }
+        &--left {
+            font-family: Impact;
+            font-size: 20px;
+            background: url('/img/business-2.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+            position: relative;
+            @include media-breakpoint-up(md) {
+                font-size: 24px;
+            }
+            @include media-breakpoint-up(lg) {
+                font-size: 36px;
+            }
+            @include media-breakpoint-up(xl) {
+                font-size: 48px;
+            }
+            &::before {
+                content: '';
+                height: 100%;
+                width: 50%;
+                right: 0;
+                position: absolute;
+                background-image: url('/img/decor-card-1.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: right 0.7em;
+            }
+
+        }
+
+        &--right {
+            font-size: 10px;
+            font-weight: 600;
+            background: url('/img/business-1.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            position: relative;
+            @include media-breakpoint-up(sm) {
+                font-size: 16px;
+            }
+            @include media-breakpoint-up(lg) {
+                font-size: 18px;
+            }
+            @include media-breakpoint-up(xl) {
+                font-size: 21px;
+            }
+            &::after {
+                content: '';
+                height: 100%;
+                width: 33%;
+                left: 0;
+                top: 0;
+                position: absolute;
+                background-image: url('/img/logo_for_footer.svg');
+                background-size:auto 2.5em;
+                background-repeat: no-repeat;
+                background-position: center;
+               
+            }
+        }
+        &-img{
+
         }
     }
 }

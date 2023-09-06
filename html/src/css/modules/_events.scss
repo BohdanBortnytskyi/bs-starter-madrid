@@ -1,0 +1,151 @@
+.page-events {
+    &__header {
+        h2{
+            font-size: 36px;
+        }
+    }
+   
+    &__accordion {
+        @include media-breakpoint-up(xl) {
+            height: 610px;
+        }
+
+        &_item {
+            transition: .2s;
+            cursor: pointer;
+            overflow: hidden;
+            margin: 15px 0;
+            @include media-breakpoint-up(xl) {
+                margin: 0 15px ;
+            }
+            &-top {
+                font-size: 16px;
+            }
+
+            &-title {
+                font-family: 'Impact';
+                align-self: center;
+                flex-shrink: 1;
+                @include media-breakpoint-up(lg) {
+                    font-size: 30px;
+                    line-height: normal;
+                    text-align: center;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    font-size: 36px;
+                    line-height: normal;
+                }
+
+                @include media-breakpoint-up(xxl) {
+                    font-size: 48px;
+                }
+            }
+
+            &-status {
+                img {
+                    object-fit: cover;
+                }
+
+                height: 1.2em;
+            }
+
+            &-text {
+
+                font-size: 14px;
+                line-height: 24px;
+                @include media-breakpoint-up(lg){
+                    font-size: 24px;
+                }
+                &::-webkit-scrollbar {
+                    width: 10px;
+                    background: none;
+
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    width: 5px;
+                    background-color: #fff;
+                    border-radius: 5px;
+                }
+
+            }
+
+            &.small {
+                height: 80px;
+                // height: min-content;
+                .page-events__accordion_item-status{
+                    transform: rotate(180deg);
+                }
+                .page-events__accordion_item-text {
+                    opacity: 0;
+                    // display: none;
+                }
+                .page-events__accordion_item-title {
+                       margin-bottom: 0 !important;
+                }
+                @include media-breakpoint-up(xl) {
+                    flex: 1;
+                    position: relative;
+                    height: inherit;
+                    .page-events__accordion_item-top {
+                       
+                        writing-mode: vertical-rl;
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        left: 0;
+                    }
+                   
+                }
+
+            }
+
+            &.expand {
+                height: 320px;
+                * {
+                    transition-delay: 200ms;
+                    opacity: 1;
+                }
+                @include media-breakpoint-up(xl) {
+                    flex: 5;
+                    height: inherit;
+                    .page-events__accordion_item-title {
+                        font-family: 'Inter';
+                        font-weight: 600;
+                       
+                    }
+                }
+              ;
+               
+            }
+
+            $color-start: $violet;
+            $color-end: $yellow;
+            $steps: 6;
+
+            @function interpolate-colors($color1, $color2, $weight) {
+                @return mix($color1, $color2, $weight);
+            }
+
+            $color-array: (
+            );
+
+        @for $i from 1 through $steps {
+            $weight: calc($i / $steps) * 100;
+            $interpolated-color: interpolate-colors($color-start, $color-end, $weight);
+            $color-array: append($color-array, $interpolated-color);
+        }
+
+        @for $i from 1 through length($color-array) {
+            $color: nth($color-array, $i);
+
+            &:nth-child(#{$i}) {
+                background-color: $color;
+            }
+        }
+    }
+
+
+}
+}
